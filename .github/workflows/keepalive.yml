@@ -1,0 +1,13 @@
+name: Keep n8n Alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch:          # allows manual run
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl n8n URL
+        run: curl -s https://n8n-247-lin.onrender.com/ > /dev/null
