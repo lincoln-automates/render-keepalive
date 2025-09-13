@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl n8n URL
-        run: curl -s https://n8n-09rm.onrender.com/workflow/bwoOVFLV2xjCx8pk > /dev/null
+        run: curl -s https://n8n-09rm.onrender.com/webhook/keepalive > /dev/null
