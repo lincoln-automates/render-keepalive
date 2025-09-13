@@ -1,14 +1,17 @@
-name: Keep n8n Alive
+name: Keep n8n Alive (Webhook + Workflow)
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes (UTC)
+    - cron: "*/10 * * * *"   # run every 10 minutes (UTC)
   workflow_dispatch:          # allows manual run
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Curl n8n URL (with retries)
+      - name: Warm up n8n with webhook (with retries)
         run: |
-          curl --retry 3 --retry-delay 10 -s https://n8n-09rm.onrender.com/webhook/keepalive > /dev/null
+          curl --retry 3 --retry-delay 10 -s https://n8n-09rm.onrender.com/webhook/c0b7a517-5719-42da-af87-81cd638a3d42 > /dev/null
+      - name: Ping n8n workflow (with retries)
+        run: |
+          curl --retry 3 --retry-delay 10 -s https://n8n-09rm.onrender.com/workflow/bwoOVFLV2xjCx8pk > /dev/null
