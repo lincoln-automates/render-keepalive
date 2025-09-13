@@ -2,8 +2,8 @@ name: Keep n8n Webhook Alive (5)
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes
-  workflow_dispatch:          # allows manual run
+    - cron: "5-59/10 * * * *"   # every 10 minutes, staggered (05,15,25,35,45,55)
+  workflow_dispatch:             # allows manual run from Actions tab
 
 jobs:
   ping:
