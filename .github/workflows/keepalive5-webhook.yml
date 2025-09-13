@@ -1,0 +1,13 @@
+name: Keep n8n Webhook Alive (5)
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch:          # allows manual run
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl n8n webhook URL
+        run: curl -s https://n8n-09rm.onrender.com/webhook/c0b7a517-5719-42da-af87-81cd638a3d42 > /dev/null
