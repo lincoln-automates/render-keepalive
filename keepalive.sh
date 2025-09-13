@@ -1,2 +1,2 @@
 #!/bin/bash
-curl -s https://n8n-247-lin.onrender.com/ > /dev/null
+curl -s https://n8n-09rm.onrender.com/ > /dev/null
