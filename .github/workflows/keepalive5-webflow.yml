@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Curl n8n webhook URL (with retries)
         run: |
-          curl --retry 3 --retry-delay 10 -s https://n8n-09rm.onrender.com/webhook/c0b7a517-5719-42da-af87-81cd638a3d42 > /dev/null
+          curl --retry 3 --retry-delay 3 -s https://n8n-09rm.onrender.com/webhook/c0b7a517-5719-42da-af87-81cd638a3d42 > /dev/null
