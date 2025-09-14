@@ -13,7 +13,3 @@ jobs:
         run: |
           curl --retry 3 --retry-delay 3 -s https://n8n-09rm.onrender.com/webhook/c0b7a517-5719-42da-af87-81cd638a3d42 > /dev/null
 
-# 2️⃣ Send Telegram notification
-curl -s -X POST "https://api.telegram.org/bot8215604218:AAElUyJ0s_SKZX9Td3PTpuU7Od0m-KMW2Nw/sendMessage" \
-     -d chat_id=6430910531 \
-     -d text="✅ n8n workflow was triggered successfully at $(date '+%Y-%m-%d %H:%M:%S')"
