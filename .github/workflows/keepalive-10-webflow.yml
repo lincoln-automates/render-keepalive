@@ -12,6 +12,3 @@ jobs:
       - name: Warm up n8n with webhook (with retries)
         run: |
           curl --retry 3 --retry-delay 3 -s https://n8n-09rm.onrender.com/webhook/keepalive > /dev/null
-      - name: Ping n8n workflow (with retries)
-        run: |
-          curl --retry 3 --retry-delay 3 -s https://n8n-09rm.onrender.com/workflow/bwoOVFLV2xjCx8pk > /dev/null
