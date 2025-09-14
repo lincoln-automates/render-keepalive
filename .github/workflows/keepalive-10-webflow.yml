@@ -2,7 +2,7 @@ name: Keep n8n Alive (Webhook + Workflow)
 
 on:
   schedule:
-    - cron: "*/3 * * * *"   # run every 10 minutes (UTC)
+    - cron: "*/2 * * * *"   # run every 10 minutes (UTC)
   workflow_dispatch:          # allows manual run
 
 jobs:
